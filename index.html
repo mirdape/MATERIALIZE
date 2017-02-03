@@ -9,6 +9,10 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <style>
+		.fullscr_bg{position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;z-index:-100;}
+		.fullscr_bg_video{position:absolute;top:0;left:0;width:100%;height:100%;}
+		</style>
     </head>
 
     <body class=teal lighten-4>
@@ -20,23 +24,50 @@
 		<div class="card-panel grey lighten-1 white-text">This is a card panel with a teal lighten-2 class</div>
 		<span class="white-text">This is a card panel with dark blue text</span>
 			<div class="row">
-			  <div class="col s1">1</div>
-			  <div class="col s1">2</div>
-			  <div class="col s1">3</div>
-			  <div class="col s1">4</div>
-			  <div class="col s1">5</div>
-			  <div class="col s1">6</div>
-			  <div class="col s1">7</div>
-			  <div class="col s1">8</div>
-			  <div class="col s1">9</div>
-			  <div class="col s1">10</div>
-			  <div class="col s1">11</div>
-			  <div class="col s1">12</div>
+				<div class="col s12 center-align pink lighten-1">1<span class="flow-text"></span></div>
+				  <div class="col s2 center-align blue lighten-3">1</div>
+				  <div class="col s2 center blue lighten-3">2</div>
+				  <div class="col s2 center blue lighten-3">3</div>
+				  <div class="col s2 center blue lighten-3">4</div>
+				  <div class="col s2 center blue lighten-3">5</div>
+				  <div class="col s2 center blue lighten-3">6</div>
+				  <div class="col s4 center lime lighten-2">1</div>
+				  <div class="col s4 center lime lighten-2">2</div>
+				  <div class="col s4 center lime lighten-2">3</div>
+				  <div class="col s6 offset-s6 center grey darken-1"><span class="flow-text">alineado derecha</span></div>
+			</div>
+			  <div class="divider"></div>
+			  <div class="section">
+				<h5>Section 1</h5>
+				<p>Stuff</p>
+			  </div>
+			  <div class="divider"></div>
+			  <div class="section">
+				<h5>Section 2</h5>
+				<p>Stuff</p>
+			  </div>
+			  <div class="divider black"></div>
+			  <div class="section">
+				<h5>Section 3</h5>
+				<p>Stuff</p>
+			  </div>
+			   <div class="row">
+			<div class="hoverable grid-example col s12 m6 l3 red"><span class="flow-text">I am always full-width (col s12)</span></div>
+			<div class="hoverable grid-example col s12 m6 l3 blue"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+			<div class="hoverable grid-example col s12 m6 l3 green"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+			<div class="hoverable grid-example col s12 m6 l3 yellow hide-on-small-only"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+			</div>
+			<div class="valign-wrapper">
+			<h5 class="valign orange">This should be vertically aligned</h5>
+			</div>
+			 <div class="video-container">
+			<iframe width="853" height="480" src="//www.youtube.com/embed/Nzn5u8vcwOU?rel=0" frameborder="0" allowfullscreen></iframe>
+			<div class="fullscr_bg">
+				<video loop muted autoplay class="fullscr_bg_video" controls>
+			<source src="img/videoGOT.mp4" type="video/mp4">
+			</video>
 			</div>
 	  </div>
-	  
     </div>
-	  
-	  
     </body>
   </html>
