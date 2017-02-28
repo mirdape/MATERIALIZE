@@ -21,25 +21,53 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/scriptForm.js"></script>
 		<div class="container">
 			<div class="row">
-				<div class="col s12 s6 l6 input-field">
-					<input id="first_name" type="text" name="nEmpresa" class="validate" maxlength="100">
+        <form id="addEmpresa">
+				<div class="col s12 m6 l6 input-field">
+					<input id="nEmpresa" type="text" name="nEmpresa" class="validate" maxlength="100" value="ADP">
           <label for="nEmpresa">Nombre Empresa</label>
         </div>
-        <div class="col s12 s6 l6 input-field">
-          <input id="cif" type="text" name="cif" class="validate" maxlength="100">
-          <label for="cif">CIF</label>
+        <div class="col s12 m6 l6 input-field">
+          <input id="cif" type="text" name="cif" class="validate" maxlength="100" pattern="(([A-Za-z]{1})([-]?)([0-9]{8}))" value="B12345678">
+          <label for="cif" data-error="cif incorrecto">CIF</label>
         </div>
-        <div class="col s12 s6 l6 input-field">
-          <input placeholder="Calle/Avda/Rambla número y piso" id="direccion" type="text" name="direccion" class="validate" maxlength="100">
+        <div class="col s12 m6 l6 input-field">
+          <input placeholder="Calle/Avda/Rambla número y piso" id="direccion" type="text" name="direccion" class="validate" maxlength="100" value="Carrer lepant, 32">
           <label for="direccion">Dirección</label>
         </div>
-        <div class="col s12 s6 l6 input-field">
-          <input id="cp" type="text" name="cp" class="validate" maxlength="5" pattern="[0-9]{5}">
+        <div class="col s12 m6 l6 input-field">
+          <input id="cp" type="text" name="cp" class="validate" maxlength="5" pattern="[0-9]{5}" value="08800">
           <label for="cp" data-error="Error Código Postal">CP</label>
         </div>
-			</div>
+        <div class="col s12 m6 l6 input-field">
+          <input id="poblacion" type="text" name="poblacion" class="validate" maxlength="100" value="Vilanova i la Geltrú">
+          <label for="poblacion">Población</label>
+        </div>
+        <div class="col s12 m6 l6 input-field">
+         <select name="provincia">
+         <option value="" disabled>Provincia</option>
+          <option value="Barcelona">Barcelona selected</option>
+          <option value="Tarragona">Tarragona</option>
+          <option value="Lleida">Lleida</option>
+          <option value="Girona">Girona</option>
+         </select>
+          <label>Provincia</label>
+        </div>
+        <div class="col s12 m6 l6 input-field">
+          <input id="telf" type="text" name="telf" class="validate" maxlength="9" pattern="[0-9]{9}" value="600111111">
+          <label for="telefono">Teléfono</label>
+        </div>
+        <div class="col s12 m6 l6 input-field">
+          <input id="email" type="email" name="email" class="validate" maxlength="100" value="mail@mail.com">
+          <label for="email" >Email</label>
+        </div>
+			   </div>
+           <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+           <i class="material-icons right">send</i>
+          </button>
+      </form>
 		</div>
     </body>
   </html>
